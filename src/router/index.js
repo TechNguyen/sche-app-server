@@ -1,15 +1,5 @@
-const siteRouter = require('./site')
-const meRouter = require('./me')
-const home = require('./home')
-const api = require('./api')
-const upload = require('./upload')
-const email = require('./sendingEmail')
-const cook = require('./cookie')
-const auth = require('./login')
-const user = require('./user')
+const course = require('./courses')
 function Route(app) {
-    app.use('/', siteRouter)
-    app.use('/auth', auth)
-    app.use('/auth/admin', user)
+    app.use('/', course)
 }
 module.exports = Route

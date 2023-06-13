@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require("cors")
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
@@ -19,6 +20,7 @@ db.connect();
 app.use(methodOverride('_method'))
 // HTTP logger
 app.use(morgan("combined"));
+app.use(cors());  
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
@@ -39,9 +41,6 @@ app.engine(
 );
 app.set("view engine", "hbs");  
 app.set("views", path.join(__dirname, "resource" ,"views"));
-app.get('/', (req, res) => {
-    res.render('home')
-})
 // Routers
 route(app);
 app.listen(port, () => {

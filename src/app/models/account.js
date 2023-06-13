@@ -1,23 +1,12 @@
-const { ObjectId } = require('mongodb')
 const mongoose = require('mongoose')
+const { ObjectId } = require('mongodb')
 const Schema = mongoose.Schema
-const account = new Schema({
+const account = new Schema ({
     username: String,
-    password: String,
-    firstname: String,
-    lastname: String,
-    email: String,
-    class: String,
-    course: String,
-    specialized: String,
-    thumbImg: String,
-    address: String,
-    potision: String,
+    password: String
 }, {
-    collection: 'Accounts', 
+    collection: 'accsh',
     timestamps: true
 })
-const AccountModels = mongoose.model('Accounts', account)
-module.exports = AccountModels
-
-
+const accModel = mongoose.model("accsh", account);
+module.exports = accModel
