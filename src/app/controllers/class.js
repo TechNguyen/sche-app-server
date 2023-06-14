@@ -20,7 +20,6 @@ class meController {
             try {
                const data = await course.create(day);
                res.json(data)
-               console.log(data);
             } catch (next) {
                 res.status(404).send(err)
             }
