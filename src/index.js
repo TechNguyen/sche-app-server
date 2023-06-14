@@ -12,7 +12,6 @@ const db = require("./config/database");
 const bodyParser = require('body-parser')
 const cookParser = require('cookie-parser')
 // Connect database
-console.log(process.env.MONGO_URL);
 db.connect();
 //overide Header 
 app.use(methodOverride('_method'))

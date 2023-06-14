@@ -6,7 +6,6 @@ async function connect() {
             useUnifiedTopology: true,
         });
 
-        console.log('success');
     } catch(error) {
         alert(error)
     }
