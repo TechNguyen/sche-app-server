@@ -9,12 +9,10 @@ const path = require("path");
 const port = process.env.PORT;
 const route = require("./router");
 const db = require("./config/database");
-const nodemailer = require('nodemailer');
-const {Server, Socket} = require('socket.io');
-const { log } = require('console');
 const bodyParser = require('body-parser')
 const cookParser = require('cookie-parser')
 // Connect database
+console.log(process.env.MONGO_URL);
 db.connect();
 //overide Header 
 app.use(methodOverride('_method'))
