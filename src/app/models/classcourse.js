@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const { ObjectId } = require('mongodb')
-const  date = require('date-and-time')
 const Schema = mongoose.Schema
 const course = new Schema ({
     class: String,
