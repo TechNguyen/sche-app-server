@@ -21,7 +21,7 @@ class meController {
                const data = await course.create(day);
                res.status(200).json(data);
             } catch (next) {
-                res.status(404).send(err)
+                res.status(404).send('Not')
             }
 
     }
